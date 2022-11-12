@@ -6,7 +6,7 @@ Files from the LinkedIn Learning course called "Azure Event Hubs for Developers"
 
 Differently from the course, here I show how to perform the same operations using different methods (azcli, Python, and Terraform). I also provide a docker image with all needed resources to have fun with azure eventhubs.
 
-[Link to the course](https://www.linkedin.com/learning/azure-event-hubs-for-developers])
+Here is the [link to the course](https://www.linkedin.com/learning/azure-event-hubs-for-developers])
 
 ## Resources
 
