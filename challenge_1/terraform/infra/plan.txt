@@ -1,0 +1,65 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # azurerm_eventhub.eventhub[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_eventhub" "eventhub" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mmessage_retention[0m[0m   = 1
+      [32m+[0m [0m[1m[0mname[0m[0m                = "eventhub-linkedin-course"
+      [32m+[0m [0m[1m[0mnamespace_name[0m[0m      = "eventhub-namespace-linkedin-course"
+      [32m+[0m [0m[1m[0mpartition_count[0m[0m     = 1
+      [32m+[0m [0m[1m[0mpartition_ids[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "rg-zbs-ehcourse"
+      [32m+[0m [0m[1m[0mstatus[0m[0m              = "Active"
+    }
+
+[1m  # azurerm_eventhub_namespace.evhn_challenge[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_eventhub_namespace" "evhn_challenge" {
+      [32m+[0m [0m[1m[0mauto_inflate_enabled[0m[0m                      = false
+      [32m+[0m [0m[1m[0mcapacity[0m[0m                                  = 1
+      [32m+[0m [0m[1m[0mdefault_primary_connection_string[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mdefault_primary_connection_string_alias[0m[0m   = (sensitive value)
+      [32m+[0m [0m[1m[0mdefault_primary_key[0m[0m                       = (sensitive value)
+      [32m+[0m [0m[1m[0mdefault_secondary_connection_string[0m[0m       = (sensitive value)
+      [32m+[0m [0m[1m[0mdefault_secondary_connection_string_alias[0m[0m = (sensitive value)
+      [32m+[0m [0m[1m[0mdefault_secondary_key[0m[0m                     = (sensitive value)
+      [32m+[0m [0m[1m[0mid[0m[0m                                        = (known after apply)
+      [32m+[0m [0m[1m[0mlocal_authentication_enabled[0m[0m              = true
+      [32m+[0m [0m[1m[0mlocation[0m[0m                                  = "brazilsouth"
+      [32m+[0m [0m[1m[0mmaximum_throughput_units[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mminimum_tls_version[0m[0m                       = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                                      = "eventhub-namespace-linkedin-course"
+      [32m+[0m [0m[1m[0mnetwork_rulesets[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_network_access_enabled[0m[0m             = true
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                       = "rg-zbs-ehcourse"
+      [32m+[0m [0m[1m[0msku[0m[0m                                       = "Standard"
+      [32m+[0m [0m[1m[0mtags[0m[0m                                      = {
+          [32m+[0m [0m"module" = "Getting Started with Event Hubs"
+        }
+      [32m+[0m [0m[1m[0mzone_redundant[0m[0m                            = false
+    }
+
+[1m  # azurerm_resource_group.rg_challenge[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_resource_group" "rg_challenge" {
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m = "brazilsouth"
+      [32m+[0m [0m[1m[0mname[0m[0m     = "rg-zbs-ehcourse"
+    }
+
+[0m[1mPlan:[0m 3 to add, 0 to change, 0 to destroy.
+[0m[0m
+[1mChanges to Outputs:[0m[0m
+  [32m+[0m [0m[1m[0meventhubs__namespace_throughput_unit[0m[0m = "#Throughput Units: 1"
+  [32m+[0m [0m[1m[0meventhubs_eventhub[0m[0m                   = "Event hub name: eventhub-linkedin-course"
+  [32m+[0m [0m[1m[0meventhubs_namespace[0m[0m                  = "Eventhubs Namespace name: eventhub-namespace-linkedin-course"
+  [32m+[0m [0m[1m[0meventhubs_namespace_pricing_tier[0m[0m     = "SKU: Standard"
+  [32m+[0m [0m[1m[0mresource_group_name[0m[0m                  = "Resource Group name: rg-zbs-ehcourse"
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
