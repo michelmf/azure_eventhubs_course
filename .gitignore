@@ -1,2 +1,3 @@
 # Ignore terraform configuration files
 .terraform*
+*.out
